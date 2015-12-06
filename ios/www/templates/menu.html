@@ -1,0 +1,20 @@
+<ons-page ng-controller="MenuController" sliding-menu-ignore="true">
+    
+    <ons-toolbar>
+    <div class="center">Menu</div>
+    </ons-toolbar>
+      
+    <ons-list class="list-top">
+        <ons-list-item modifier="chevron" ng-repeat="item in items" ng-click="menu.toggleMenu(); showDetail($index)">
+            <ons-row>
+                <ons-col width="15%"> 
+                <ons-icon icon="{{item.icon}}"></ons-icon>
+                </ons-col>
+                <ons-col>
+                {{item.title}}
+                </ons-col>
+            </ons-row> 
+        </ons-list-item>
+    </ons-list>  
+
+</ons-page>

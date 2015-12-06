@@ -1,0 +1,17 @@
+<ons-page ng-cloak ng-controller="StoryController" sliding-menu-ignore="true">
+    <section ng-cloak>
+        <div ng-cloak  class="alien_rect">
+            <video width="100%" height="100%" webkit-playsinline preload autoplay loop class="alien_video">
+                <source src="img/iphone-ipad-video.mp4" type="video/mp4" ng-if="isIpad">
+                <source src="img/iphone5-video.mp4" type="video/mp4" ng-if="!isIpad">
+            </video>
+        </div>
+
+        <div ng-cloak class="continue_rect">
+            <br>
+            <button ng-cloak class="button continue_button" ng-click="onContinue()"></button>
+            <br>
+        </div>
+    </section>
+    
+</ons-page>

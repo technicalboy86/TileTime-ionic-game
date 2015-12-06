@@ -1,0 +1,144 @@
+<ons-page ng-cloak ng-controller="GamePlayController" sliding-menu-ignore="true">
+    <section style="height:100%;" class="game_play_body">
+        <div class="game_play_top_bar">
+            <div ng-cloak class="world_level_text_rect">W {{currentWorldId}}-{{currentLevelId}}</div>
+            <ons-row>
+                <ons-col>
+                    <div id="progressbar"></div>
+                </ons-col>
+                <ons-col width="18%">
+                    <div class="pause_btn" ng-click="onGamePause();">
+                        <i class="fa fa-pause"></i>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div class="game_board" >
+            <div ng-if="IsTwoTiles" class="IsTwoTiles">
+                    <ons-row>
+                        <ons-col ng-click="onClickTileA()">
+                            <div class="tileA"></div>
+                        </ons-col>
+                        <ons-col ng-click="onClickTileB()">
+                            <div class="tileB"></div>
+                        </ons-col>
+                    </ons-row>
+            </div>
+            
+            <div ng-if="IsThreeTiles" class="IsThreeTiles">
+                <ons-row >
+                    <ons-col ng-click="onClickTileC()">
+                        <div class="tileC"></div>
+                    </ons-col>
+                </ons-row>
+                
+                <ons-row style="margin-top:10px;">
+                    <ons-col ng-click="onClickTileD()">
+                        <div class="tileD"></div>
+                    </ons-col >
+                    <ons-col ng-click="onClickTileE()">
+                        <div class="tileE"></div>
+                    </ons-col>
+                </ons-row>
+            </div>
+            
+            <div ng-cloak ng-if="IsFourTiles" class="IsFourTiles">
+                <ons-row>
+                    <ons-col ng-click="onClickTileF()">
+                        <div class="tileF"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileG()">
+                        <div class="tileG"></div>
+                    </ons-col>
+                </ons-row>
+                <ons-row style="margin-top:10px;">
+                    <ons-col ng-click="onClickTileH()">
+                        <div class="tileH"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileI()">
+                        <div class="tileI"></div>
+                    </ons-col>
+                </ons-row>
+            </div>
+            
+            <div ng-cloak ng-if="IsFiveTiles" class="IsFiveTiles">
+                <ons-row >
+                    <ons-col ng-click="onClickTileJ()">
+                        <div class="tileJ"></div>
+                    </ons-col>
+                </ons-row>
+                <ons-row style="margin-top:10px;">
+                    <ons-col ng-click="onClickTileK()">
+                        <div class="tileK"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileL()">
+                        <div class="tileL"></div>
+                    </ons-col>
+                </ons-row>
+                <ons-row style="margin-top:10px;">
+                    <ons-col ng-click="onClickTileM()">
+                        <div class="tileM"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileN()">
+                        <div class="tileN"></div>
+                    </ons-col>
+                </ons-row>
+            </div>
+            
+            <div ng-cloak ng-if="IsSixTiles" class="IsSixTiles">
+                <ons-row >
+                    <ons-col ng-click="onClickTileO()">
+                        <div class="tileO"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileP()">
+                        <div class="tileP"></div>
+                    </ons-col>
+                </ons-row>
+                <ons-row style="margin-top:10px;">
+                    <ons-col ng-click="onClickTileQ()">
+                        <div class="tileQ"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileR()">
+                        <div class="tileR"></div>
+                    </ons-col>
+                </ons-row>
+                <ons-row style="margin-top:10px;">
+                    <ons-col ng-click="onClickTileS()">
+                        <div class="tileS"></div>
+                    </ons-col>
+                    <ons-col ng-click="onClickTileT()">
+                        <div class="tileT"></div>
+                    </ons-col>
+                </ons-row>
+            </div>
+            
+        </div>
+        <div class="lives_rect" >
+            <i class="fa fa-heart"></i>
+            <div class="lives_count">{{lives_count}}</div>
+        </div>
+        <div ng-cloak class="tools_rect" >
+            <ons-row>
+                <ons-col ng-cloak ng-click="seeArrangement()">
+                    <div class="time_plus_btn">
+                        <i class="fa fa-eye"></i>
+                        <p ng-cloak>{{currentSneakyPeak}}</p>
+                    </div>
+                </ons-col>
+                <ons-col width="33%" ng-cloak ng-click="addMoreTime()">
+                    <div class="help_one_tile_btn">
+                        <i class="fa fa-clock-o"></i>
+                        <p ng-cloak>{{currentClockBoost}}</p>
+                    </div>
+                </ons-col>
+                <ons-col width="33%" ng-cloak ng-click="completeOneTile()">
+                    <div class="see_arrangement_btn">
+                        <i class="fa fa-gavel"></i>
+                        <p ng-cloak>{{currentTileBuster}}</p>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+    </section>
+    
+</ons-page>

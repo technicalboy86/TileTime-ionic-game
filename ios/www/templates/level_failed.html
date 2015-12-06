@@ -1,0 +1,39 @@
+<ons-page ng-cloak ng-controller="LevelFailedController" ng-cloak sliding-menu-ignore="true">
+    <section ng-cloak style="height:100%;" class="game_play_body">
+        <div class="level_complete_top_bar">
+            <ons-row>
+                <ons-col>
+                </ons-col>
+                <ons-col width="18%">
+                    <div class="pause_btn">
+                        <i class="fa fa-pause"></i>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div class="level_complete_board" >
+            <img src="img/level_failed.png" class="level_complete_title level_failed_title"/>
+        </div>
+        <div class="level_complete_tools_rect" >
+            <div class="level_failed_character"></div>
+            <ons-row>
+                <ons-col ng-cloak ng-click="onListBtn()">
+                    <div class="l_list_btn" >
+                        <i class="fa fa-list"></i>
+                    </div>
+                </ons-col>
+                <ons-col width="33%" ng-cloak ng-click="onReplayBtn()">
+                    <div class="l_replay_btn" >
+                        <i class="fa fa-repeat"></i>
+                    </div>
+                </ons-col>
+                <ons-col width="33%" ng-cloak ng-click="onVisitShopBtn()">
+                    <div class="l_play_btn" >
+                        <div class="visit_shop_btn">Visit Shop</div>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+    </section>
+    
+</ons-page>

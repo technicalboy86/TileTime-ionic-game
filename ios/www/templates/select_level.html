@@ -1,0 +1,34 @@
+<ons-page ng-cloak ng-controller="SelectLevelController"  sliding-menu-ignore="true" >
+    <section ng-cloak style="background:{{selectedWorld.mainColor}} !important; height:100%;" >
+        <div ng-cloak class="select_level_top_bar" style="background:transparent !important;">
+            <ons-row>
+                <ons-col ng-cloak width="18%" ng-click="appNavigator.resetToPage('templates/select_world.html',{animation:'slide'});">
+                    <img class="back_img" src="img/back.png" />
+                </ons-col>
+                <ons-col>
+                    <img class="select_level_title" src="img/select_level.png" />
+                </ons-col>
+                <ons-col width="18%" ng-cloak ng-click="onGotoShopBtn()">
+                    <img class="cart_img" src="img/cart.png" />
+                </ons-col>
+            </ons-row>
+        </div>
+        <div ng-cloak class="s_world_text">{{selectedWorld.world}}</div>
+        <img ng-cloak class="select_level_content_img" src="{{selectedWorld.mainImg}}" />
+        <div ng-cloak class="select_level_rect" style="background:{{selectedWorld.mainColor}} !important;">
+            <div class="m_swiper">
+                <div class="swiper-container m_swiper_cintainer">
+                    <div class="swiper-wrapper">
+                        <div ng-cloak class="swiper-slide" ng-repeat="row in currentWorldData.levels" ng-click="showDetail($index)">
+                            <div ng-cloak class="swiper_index">{{row.id}}</div>
+                            <img src="img/completed.png" ng-if="row.complete == true"/>
+                            <img src="img/uncomplete.png" ng-if="row.complete == false"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+</ons-page>

@@ -1,0 +1,52 @@
+<ons-page ng-cloak ng-controller="LevelCompleteController" sliding-menu-ignore="true">
+    <section style="height:100%;" class="game_play_body">
+        <div class="level_complete_top_bar">
+            <ons-row ng-cloak>
+                <ons-col>
+                </ons-col>
+                <ons-col width="18%">
+                    <div class="pause_btn">
+                        <i class="fa fa-pause"></i>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div class="level_complete_board" >
+            <img src="img/level_completed.png" class="level_complete_title"/>
+            <div class="l_share_text"> Share </div>
+            
+            <ons-row>
+                <ons-col ng-click="shareFB()">
+                    <div class="l_fb_btn">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                </ons-col>
+                <ons-col width="50%" ng-click="shareTwitter()">
+                    <div class="l_twitter_btn">
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div ng-cloak class="level_complete_tools_rect" >
+            <ons-row>
+                <ons-col ng-cloak ng-click="onListBtn()">
+                    <div class="l_list_btn" >
+                        <i class="fa fa-list"></i>
+                    </div>
+                </ons-col>
+                <ons-col ng-cloak width="33%" ng-click="onReplayBtn()">
+                    <div class="l_replay_btn" >
+                        <i class="fa fa-repeat"></i>
+                    </div>
+                </ons-col>
+                <ons-col ng-cloak width="33%"  ng-click="onPlayNextLevelBtn()">
+                    <div class="l_play_btn">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+    </section>
+    
+</ons-page>

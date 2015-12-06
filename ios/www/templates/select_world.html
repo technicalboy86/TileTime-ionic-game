@@ -1,0 +1,29 @@
+<ons-page ng-cloak ng-controller="SelectWorldController" style="background:#ed1f4b !important;"  sliding-menu-ignore="true">
+    <section ng-cloak>
+        <div ng-cloak class="top_bar">
+            <ons-row ng-cloak>
+                <ons-col ng-cloak width="18%" ng-click="appNavigator.resetToPage('templates/story.html', {animation: 'slide'});">
+                    <img ng-cloak class="back_img" src="img/back.png" />
+                </ons-col>
+                <ons-col>
+                    <img ng-cloak class="select_world_title" src="img/select_word.png" />
+                </ons-col>
+                <ons-col ng-cloak width="18%" ng-cloak ng-click="onGotoShopBtn()">
+                    <img class="cart_img" src="img/cart.png" />
+                </ons-col>
+            </ons-row>
+        </div>
+        <img ng-cloak class="select_world_content_img" src="img/select_word_content.png" />
+        <div ng-cloak class="select_world_rect">
+            <ul ng-cloak rn-carousel rn-carousel-indicator rn-carousel-control>
+                <li ng-cloak ng-repeat="slide in slides" >
+                    <img ng-cloak ng-src="{{slide.picture}}" ng-click="showDetail($index);" class="sw_slide_img"/>
+                    <div ng-cloak class="content" ng-click="showDetail($index);">
+                        {{slide.world}} : {{slide.word}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+</ons-page>

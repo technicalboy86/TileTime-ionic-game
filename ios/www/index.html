@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+        
+        <title>TileTime</title>
+
+        <link rel="stylesheet" type="text/css" href="vendors/onsen/css/onsenui.css"/>
+    
+        <link rel="stylesheet" type="text/css" href="vendors/onsen/css/onsen-css-components.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="css/angular-carousel.css"/>
+        <link rel="stylesheet" media="all and (max-device-width:350px)" type="text/css" href="css/angular-carousel.css"/>
+        <link rel="stylesheet" media="all and (min-device-width:351px) and (max-device-width:480px)" type="text/css" href="css/angular-carousel6.css"/>
+        <link rel="stylesheet" media="all and (min-device-width:481px) and (max-device-width:1024px)" type="text/css" href="css/angular-carousel.css"/>
+        <link rel="stylesheet" media="all and (max-device-height:480px)" type="text/css" href="css/angular-carousel4.css"/>
+        <link rel="stylesheet" href="css/idangerous.swiper.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        
+        <link rel="stylesheet" media="all and (max-device-width:350px)" type="text/css" href="css/iphone_style.css"/>
+        <link rel="stylesheet" media="all and (min-device-width:351px) and (max-device-width:480px)" type="text/css" href="css/iphone6_style.css"/>
+        <link rel="stylesheet" media="all and (min-device-width:481px) and (max-device-width:1024px)" type="text/css" href="css/ipad_style.css"/>
+        <link rel="stylesheet" media="all and (max-device-height:480px)" type="text/css" href="css/iphone4_style.css"/>
+        
+    </head>
+    <body ng-controller="MainController" ng-init="onLoad()">
+        <div ng-show="loader.loading" class="loader-background">
+            <section class="loader-container">
+                <ons-icon icon="ion-loading-c" spin="true"></ons-icon>
+                <br><br>
+            </section>
+        </div>
+        <ons-sliding-menu menu-page="" main-page="templates/home.html" side="left" max-slide-distance="85%" swipable="false" swipe-target-width="100" var="menu">
+        </ons-sliding-menu>
+        
+        <!-- Javascripts -->
+        <script type="text/javascript" src="vendors/onsen/js/angular/angular.js"></script>    
+        <script type="text/javascript" src="vendors/onsen/js/angular/angular-touch.js"></script>
+
+        <script type="text/javascript" src="vendors/onsen/js/onsenui.js"></script>
+        
+        <script type="text/javascript" src="js/angular-carousel.js"></script>
+
+        <script type="text/javascript" src="js/event.js"></script>
+        <script type="text/javascript" src="js/angular-local-storage.js"></script>
+        <script type="text/javascript" src="js/angular-sanitize.js"></script>
+        
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/idangerous.swiper-2.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript">
+        app.initialize();
+        </script>
+        
+    </body>
+</html>
